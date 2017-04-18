@@ -8,6 +8,7 @@ class TestPrimeNumberFunction(unittest.TestCase):
         self.result
 
     def testIfNIsInteger(self):
+        #Not sure how to test the argument itself passed to the function
         self.assertIsInstance(self, self.n, int, 'n must be an integer')
 
     def testIfNIsGreaterThan0(self):
@@ -19,6 +20,7 @@ class TestPrimeNumberFunction(unittest.TestCase):
 
     def testWhenNIsaString(self):
         self.result = f.generate_prime_numbers_function("nuorevnuer")
+        #Meant to test if TypeError is raised
         assert self.result == "n must be an integer"
 
     def testWHenNIsNegative(self):
